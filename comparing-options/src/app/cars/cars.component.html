@@ -1,0 +1,16 @@
+<div class="header-info">
+  <!-- <div class="car-info">
+    <button *ngIf="hasCars" mat-button [matMenuTriggerFor]="menu">Cars</button>
+    <mat-menu #menu="matMenu">
+      <button *ngFor="let item of cars" mat-menu-item (click)="chooseFirstItem(item)">{{item.name}}</button>
+    </mat-menu>
+  </div> -->
+  <app-car-info [options]="firstCarOptions" (chooseItem)="chooseFirstCar($event)"></app-car-info>
+  <app-car-info [options]="secondCarOptions" (chooseItem)="chooseSecondCar($event)"></app-car-info>
+</div>
+<div>
+  <h3>Common options</h3>
+  <ul>
+    <li *ngFor="let item of commonOptions">{{item}}</li>
+  </ul>
+</div>

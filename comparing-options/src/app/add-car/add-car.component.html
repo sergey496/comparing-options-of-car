@@ -1,0 +1,18 @@
+<form class="form" [formGroup]="form">
+    <mat-form-field class="example-full-width">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label>Link</mat-label>
+        <input matInput formControlName="link">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label>Insert options</mat-label>
+        <textarea matInput placeholder="Options" formControlName="options"></textarea>
+    </mat-form-field>
+    <div class="controls">
+        <button  mat-flat-button (click)="onSubmit()" onSubmit type="submit">Save car</button>
+        <button mat-flat-button color="warn" (click)="cancel()">Cancel</button>
+    </div>
+</form>

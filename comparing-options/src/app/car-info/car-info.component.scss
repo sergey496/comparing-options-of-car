@@ -1,0 +1,26 @@
+:host {
+    width: 50%;
+}
+
+a {
+    display: block;
+    margin: 8px 0;
+}
+
+.label {
+    font-weight: 600;
+    margin: 8px 0;
+}
+
+.cross {
+    margin: 13px;
+    text-align: center;
+    color: red;
+    font-weight: bold;
+}
+
+.button {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}

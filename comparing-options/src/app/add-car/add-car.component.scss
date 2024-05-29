@@ -1,0 +1,16 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 8px;
+
+    textarea {
+        min-height: 200px;
+    }
+
+    .controls {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}

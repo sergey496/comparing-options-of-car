@@ -1,0 +1,22 @@
+<div class="car-info">
+    <button *ngIf="hasCars" mat-button [matMenuTriggerFor]="menu">Cars</button>
+    <mat-menu #menu="matMenu">
+        <p *ngFor="let item of cars$ | async" class="button">
+            <button class="button" mat-menu-item (click)="chooseCar(item)"> {{item.name}}</button>
+            <span class="cross" (click)="removeCar(item)">X</span>
+        </p>
+
+    </mat-menu>
+    <div *ngIf="carData">
+        <span class="label">Name</span>
+        <p>{{carData.name}}</p>
+        <a href="carData.link" target="_blank">LINK</a>
+        <span class="label">Comment</span>
+        <p>{{carData.comment}}</p>
+    </div>
+    <h3>Uniq options</h3>
+    <p>Count of uniq options: {{options.length}}</p>
+    <ul>
+        <li *ngFor="let item of options">{{item}}</li>
+    </ul>
+</div>
